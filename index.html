@@ -19,6 +19,13 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+
+        <style>
+            #results,
+            #loading {
+                display: none;
+            }
+        </style>
     </head>
     <body class="bg-body">
         <div class="container">
@@ -42,31 +49,53 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">°F</span>
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="fahren"
-                                        placeholder="Fahrenheit temperature"
-                                    />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <input
                                     type="submit"
                                     value="Calculate"
                                     class="btn-dark btn-block"
                                 />
-                                <!-- change the color to this one from that website to  #8de4af
-                                add the loader and download the image
-                                -->
                             </div>
                         </form>
+
+                        <div id="loading">
+                            <img src="loading.gif" alt="" />
+                        </div>
+
+                        <div id="results" class="pt-4">
+                            <h5>Results</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"
+                                        >Fahrenheit</span
+                                    >
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="results"
+                                        disabled
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"
+        ></script>
+        <script src="app.js"></script>
     </body>
 </html>
