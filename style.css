@@ -12,3 +12,11 @@ body {
     background-color: #8de4af;
     color: black;
 }
+
+#loading {
+    display: none;
+}
+
+#results {
+    display: none;
+}
